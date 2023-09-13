@@ -1,11 +1,13 @@
-name: Run From - ${{ env.BRANCH_NAME }} - Branch
+name: Node.js CI
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - '*'
 
 jobs:
   webdriverio:
-
     runs-on: ubuntu-latest
 
     steps:
