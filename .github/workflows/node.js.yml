@@ -1,4 +1,4 @@
-name:  ${{ github.ref }}
+name: Build on Branch - ${{ github.ref }}
 
 on:
   workflow_dispatch:
@@ -13,9 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Set Branch Name
-      run: echo "BRANCH_NAME=$(echo $GITHUB_REF | sed 's/refs\/heads\///')" >> $GITHUB_ENV
 
     - name: Setup Node.js
       uses: actions/setup-node@v2
