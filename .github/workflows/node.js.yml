@@ -1,4 +1,4 @@
-name:  ${{ github.ref_name }}
+name:  ${GITHUB_REF##*/}
 
 on:
   workflow_dispatch:
