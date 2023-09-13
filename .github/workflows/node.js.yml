@@ -1,4 +1,4 @@
-name: Node.js CI
+name:  ${{ github.ref_name }}
 
 on:
   workflow_dispatch:
